@@ -14,5 +14,5 @@ const eventsPath = path.join(__dirname, "./events");
 (async () => {
   await handleCommands(client, commandsPath);
   handleEvents(client, eventsPath);
-  client.login(config.DISCORD_TOKEN);
+  client.login(config.TOKEN);
 })();
