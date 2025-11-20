@@ -30,7 +30,7 @@ export async function execute(interaction: ChatInputCommandInteraction, client: 
             }).join('\n');
             embed.addFields({ name: 'Options', value: optionsDescription });
         }
-        await interaction.reply({ embeds: [embed] });
+        return await interaction.reply({ embeds: [embed] });
     }
     const embed = new EmbedBuilder()
         .setColor('#C9C2B2')

@@ -20,11 +20,11 @@ export async function handleCommands(client: Client, commandsPath: string) {
     }
   }
 
-  const rest = new REST({ version: "10" }).setToken(config.DISCORD_TOKEN);
+  const rest = new REST({ version: "10" }).setToken(config.TOKEN);
   try {
     console.log("Started refreshing application (/) commands.");
     await rest.put(
-      Routes.applicationCommands(config.DISCORD_CLIENT_ID),
+      Routes.applicationCommands(config.CLIENT_ID),
       { body: commandArray }
     );
     console.log("Successfully reloaded application (/) commands.");
